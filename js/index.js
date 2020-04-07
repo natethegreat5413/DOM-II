@@ -33,6 +33,7 @@ foot.addEventListener('click', (event) => {
     } else {
     event.target.style.backgroundColor = 'grey'
     }
+    event.stopPropagation();
 })
 
 
@@ -71,9 +72,21 @@ logoHeading.addEventListener('dblclick', () => {
 
 //click border
 
-const imgBorder = document.getElementsByTagName('img');
+const imgBorder = document.querySelector('img');
 imgBorder.addEventListener('click', (event) => {
     imgBorder.style.border = '5px dotted yellow';
+})
+
+
+//click change color
+
+const mainNav = document.querySelector('.main-navigation')
+mainNav.addEventListener('click', (event) => {
+    if(event.target.style.backgroundColor === 'khaki'){
+    event.target.style.backgroundColor = 'white'
+    } else {
+    event.target.style.backgroundColor = 'khaki'
+    }
 })
 
 
