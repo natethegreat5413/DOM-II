@@ -17,12 +17,7 @@ changeNav.addEventListener('mouseout', (event) => {
 })
 
 
-//Welcome Alert
 
-const button = document.querySelector('.destination .btn');
-    button.addEventListener('click', (event) => {
-    alert('Lets get YOU Signed up!!')
-})
 
 //change background color of the footer on click
 
@@ -39,9 +34,9 @@ foot.addEventListener('click', (event) => {
 
 //Alert message when page Loads
 
-// window.addEventListener('load', (event) => {
-//     alert("HELLO GOOD PEOPLE!! THANKS FOR VISITING THIS WEBPAGE! TRY CLICKING SIGN UP!")
-// });
+window.addEventListener('load', (event) => {
+    alert("HELLO GOOD PEOPLE!! THANKS FOR VISITING THIS WEBPAGE! TRY CLICKING SIGN UP!")
+});
 
 //KeyDown
 
@@ -90,9 +85,29 @@ mainNav.addEventListener('click', (event) => {
 })
 
 
+// const getAll = (selector) => {
+//     return document.querySelectorAll(selector);
+//     }
+//     const bottomButtons = getAll('.btn');
+//     const bottomButtonsArray = Array.from(bottomButtons);
+//     bottomButtonsArray.forEach(button => {
+//       button.addEventListener('click', event =>{
+//         // button.innerHTML = `Click count: ${event.detail}`;
+//         alert('Lets get YOU Signed up!!')
+//     });
+//     });
 
 
+//Welcome Alert
 
+const button = document.querySelectorAll('.btn');
+    const bottomBtns = Array.from(button);
+    bottomBtns.forEach(event => {
+        event.addEventListener('click', e =>{
+            alert('Lets get YOU Signed up!!')
+        })
+    })
+    
 
 
 
