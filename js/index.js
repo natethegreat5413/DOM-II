@@ -79,6 +79,20 @@ logoHeading.addEventListener('dblclick', () => {
     }
 });
 
+//Double Click 2 //Make home link disappear
+
+const homeLink = document.querySelector('nav a');
+homeLink.addEventListener('dblclick', () => {
+    homeLink.classList.add('off')
+})
+
+// double click to bring back homelink
+
+const contact = document.querySelectorAll('nav a')
+contact[3].addEventListener('dblclick', () => {
+    homeLink.classList.remove('off')
+    
+})
 
 //click border
 
@@ -99,6 +113,8 @@ mainNav.addEventListener('click', (event) => {
     }
     event.stopPropagation()
 })
+
+
 
 
 // const getAll = (selector) => {
