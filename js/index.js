@@ -63,10 +63,15 @@ const bodyColor = document.querySelector('body');
 //Wheel, change color to tomato while you scroll
 
 const bodyColor2 = document.querySelector('body');
-bodyColor2.addEventListener('click', (event) => {
-    bodyColor2.style.backgroundColor = 'tomato';
+bodyColor2.addEventListener('wheel', (event) => {
+    bodyColor2.style.background = 'linear-gradient(59deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%)'
 
 });
+
+//Wheel, change colors of header as you scroll
+
+
+
 
 //Double Click
 
