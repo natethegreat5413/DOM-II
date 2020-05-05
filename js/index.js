@@ -10,6 +10,20 @@ changeNav.addEventListener('mouseover', (event) => {
     event.target.style.color = 'gold';
 });
 
+//Mouseover2
+
+    document.querySelectorAll('img').forEach( el => {
+    el.addEventListener("mouseenter", () => {
+        el.style.transform = "scale(1.08)";
+        el.style.transition = "transform 0.3s"
+    })
+
+    el.addEventListener("mouseleave", () => {
+        el.style.transform = "scale(1)";
+    })
+})
+
+
 //Mouseout
 
 changeNav.addEventListener('mouseout', (event) => {
@@ -34,9 +48,9 @@ foot.addEventListener('click', (event) => {
 
 //Alert message when page Loads
 
-window.addEventListener('load', (event) => {
-    alert("HELLO GOOD PEOPLE!! THANKS FOR VISITING THIS WEBPAGE! TRY CLICKING SIGN UP!")
-});
+// window.addEventListener('load', (event) => {
+//     alert("HELLO GOOD PEOPLE!! THANKS FOR VISITING THIS WEBPAGE! TRY CLICKING SIGN UP!")
+// });
 
 //KeyDown
 
@@ -49,8 +63,9 @@ const bodyColor = document.querySelector('body');
 //Wheel, change color to tomato while you scroll
 
 const bodyColor2 = document.querySelector('body');
-bodyColor2.addEventListener('wheel', (event) => {
+bodyColor2.addEventListener('click', (event) => {
     bodyColor2.style.backgroundColor = 'tomato';
+
 });
 
 //Double Click
@@ -82,6 +97,7 @@ mainNav.addEventListener('click', (event) => {
     } else {
     event.target.style.backgroundColor = 'khaki'
     }
+    event.stopPropagation()
 })
 
 
